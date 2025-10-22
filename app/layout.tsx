@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Protest_Strike, Play } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 const protestStrike = Protest_Strike({
   variable: "--font-protest-strike",
@@ -33,7 +32,6 @@ export default function RootLayout({
       >
         <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );

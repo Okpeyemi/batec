@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ServicesSection() {
   return (
-    <section className="pt-20 pb-40 px-6 bg-white">
+    <section className="pt-20 pb-20 lg:pb-60 xl:pb-40 md:px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Titre de la section */}
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-black">
@@ -11,11 +11,11 @@ export default function ServicesSection() {
         </h2>
 
         {/* Grille des services */}
-        <div className="space-y-80 mt-44">
+        <div className="space-y-20 lg:space-y-100 xl:space-y-80 lg:mt-54 xl:mt-44">
           {/* Service 1 - Construction d'Exception */}
           <div className="relative">
             {/* Image à droite */}
-            <div className="relative z-50 h-[400px] w-[400px] rounded-4xl overflow-hidden ml-auto">
+            <div className="hidden lg:flex relative z-50 h-[400px] w-[400px] rounded-4xl overflow-hidden ml-auto">
               <Image
                 src="/services-section-image1.png"
                 alt="Construction d'Exception"
@@ -25,11 +25,11 @@ export default function ServicesSection() {
             </div>
 
             {/* Carte d'information superposée */}
-            <div className="absolute top-1/2 -translate-y-1/2 left-0 w-full max-w-[900px] px-6 md:px-0">
-              <div className="bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-4xl p-10 pr-44 shadow-2xl">
+            <div className="lg:absolute top-1/2 lg:-translate-y-1/2 left-0 w-full lg:max-w-[700px] xl:max-w-[900px] px-6 md:px-0">
+              <div className="bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-4xl p-10 max-md:p-6 lg:pr-44 shadow-2xl">
                 {/* En-tête avec icône et titre */}
                 <div className="flex items-center gap-4">
-                  <div className="bg-[#FF6B6B] w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="hidden lg:flex bg-[#FF6B6B] w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
                     <div className="relative w-8 h-8">
                       <Image
                         src="/warranty.png"
@@ -69,8 +69,8 @@ export default function ServicesSection() {
                 </div>
 
                 {/* Badge garantie */}
-                <div className="flex items-center gap-3 mb-6 bg-black/10 rounded-full px-4 py-3 w-fit">
-                  <div className="bg-[#FFD700] w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="flex items-center gap-3 mb-6 md:bg-black/10 rounded-full md:px-4 md:py-3 w-fit">
+                  <div className="bg-[#FFD700] max-md:hidden w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
                     <div className="relative w-6 h-6">
                       <Image
                         src="/warranty.png"
@@ -86,16 +86,16 @@ export default function ServicesSection() {
                 </div>
 
                 {/* Boutons */}
-                <div className="flex items-center gap-4">
-                  <Link
-                    href="/contact"
-                    className="inline-block bg-[#FF6B6B] text-white px-8 py-3 rounded-full font-bold hover:bg-[#ff5252] transition-colors"
-                  >
-                    Planifiez votre projet
-                  </Link>
+                <div className="flex lg:flex-row flex-col items-center gap-4">
                   <div className="text-black text-sm flex-1 items-center text-justify">
                     <span>Notre promesse : Un chantier bien géré, des délais respectés, et un résultat qui vous rend fier.</span>
                   </div>
+                  <Link
+                    href="/contact"
+                    className="inline-block bg-[#FF6B6B] w-full lg:w-auto text-center text-white px-8 py-3 rounded-full font-bold hover:bg-[#ff5252] transition-colors"
+                  >
+                    Planifiez votre projet
+                  </Link>
                 </div>
               </div>
             </div>
@@ -104,7 +104,7 @@ export default function ServicesSection() {
           {/* Service 2 - Rénovation */}
           <div className="relative">
             {/* Image à gauche */}
-            <div className="relative z-50 h-[400px] w-[400px] rounded-4xl overflow-hidden">
+            <div className="hidden lg:flex relative z-50 h-[400px] w-[400px] rounded-4xl overflow-hidden">
               <Image
                 src="/services-section-image2.png"
                 alt="Rénovation"
@@ -114,11 +114,11 @@ export default function ServicesSection() {
             </div>
 
             {/* Carte d'information superposée */}
-            <div className="absolute top-1/2 -translate-y-1/2 right-0 w-full max-w-[900px] px-6 md:px-0">
-              <div className="bg-gradient-to-br from-[#33B5E5] to-[#0099CC] rounded-4xl p-10 pl-44 shadow-2xl">
+            <div className="lg:absolute top-1/2 lg:-translate-y-1/2 right-0 w-full lg:max-w-[700px] xl:max-w-[900px] px-6 md:px-0">
+              <div className="bg-gradient-to-br from-[#33B5E5] to-[#0099CC] rounded-4xl p-10 max-md:p-6 lg:pl-44 shadow-2xl">
                 {/* En-tête avec icône et titre */}
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="bg-[#FFD700] w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="hidden lg:flex bg-[#FFD700] w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
                     <div className="relative w-8 h-8">
                       <Image
                         src="/warranty.png"
@@ -157,8 +157,8 @@ export default function ServicesSection() {
                 </div>
 
                 {/* Badge garantie */}
-                <div className="flex items-center gap-3 mb-6 bg-white/20 rounded-full px-4 py-3 w-fit">
-                  <div className="bg-[#FFD700] w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="flex items-center gap-3 mb-6 md:bg-white/20 rounded-full md:px-4 md:py-3 w-fit">
+                  <div className="bg-[#FFD700] max-md:hidden w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
                     <div className="relative w-6 h-6">
                       <Image
                         src="/warranty.png"
@@ -174,16 +174,16 @@ export default function ServicesSection() {
                 </div>
 
                 {/* Boutons */}
-                <div className="flex items-center gap-4">
-                  <Link
-                    href="/contact"
-                    className="inline-block bg-white text-[#0099CC] px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors"
-                  >
-                    Démarrez votre rénovation
-                  </Link>
+                <div className="flex lg:flex-row flex-col items-center gap-4">
                   <div className="text-white text-sm flex-1 items-center text-justify">
                     <span>Laissez-nous moderniser votre bien et augmenter sa valeur dès aujourd&apos;hui !</span>
                   </div>
+                  <Link
+                    href="/contact"
+                    className="inline-block bg-white w-full lg:w-auto text-center text-[#0099CC] px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors"
+                  >
+                    Démarrez votre rénovation
+                  </Link>
                 </div>
               </div>
             </div>

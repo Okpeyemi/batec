@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import ExpertisesSection from "@/components/acceuil/ExpertisesSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         buttonLink="/contact"
       />
       <ExpertisesSection />
+      <Footer />
     </>
   );
 }

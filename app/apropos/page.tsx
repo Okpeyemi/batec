@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/apropos/AboutSection";
+import Footer from "@/components/Footer";
 
 export default function APropos() {
   return (
@@ -12,6 +13,11 @@ export default function APropos() {
         buttonLink="/contact"
       />
       <AboutSection />
+            <Footer
+              ctaTitle="Prêt à Lancer Votre Projet BTP ?"
+              ctaDescription="Faites confiance à Batec Guadeloupe pour un résultat qui dépasse vos attentes. Contactez-nous pour un devis personnalisé et gratuit !"
+              ctaButtonText="Demandez un Devis"
+            />
     </>
   );
 }

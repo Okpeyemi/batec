@@ -27,17 +27,17 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white">
       <div className="max-w-2xl mx-auto">
         {/* Titre */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-black">
           Ecrivez nous :
         </h2>
 
         {/* Formulaire */}
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
           {/* Email et Téléphone */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
             <div className="relative">
               <input
                 type="email"
@@ -130,7 +130,7 @@ export default function ContactForm() {
           {/* Bouton Envoyer */}
           <button
             type="submit"
-            className="w-full bg-[#FFD700] text-black font-bold text-xl py-4 rounded-full hover:bg-[#FFC700] transition-colors"
+            className="w-full bg-[#FFD700] text-black font-bold text-lg sm:text-xl py-3 sm:py-4 rounded-full hover:bg-[#FFC700] transition-colors"
           >
             Envoyer
           </button>

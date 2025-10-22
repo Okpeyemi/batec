@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-20 md:px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Grille des sections */}
         <div className="space-y-24">
           {/* Notre Histoire */}
           <div className="relative">
             {/* Image à droite */}
-            <div className="relative z-50 h-[300px] w-[300px] rounded-3xl overflow-hidden ml-auto">
+            <div className="hidden lg:block relative z-50 h-[300px] w-[300px] rounded-3xl overflow-hidden ml-auto">
               <Image
                 src="/apropos-section-image1.png"
                 alt="Notre Histoire"
@@ -19,8 +19,8 @@ export default function AboutSection() {
             </div>
 
             {/* Carte d'information superposée */}
-            <div className="absolute top-1/2 -translate-y-1/2 left-0 w-full max-w-[900px] px-6 md:px-0">
-              <div className="bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-4xl p-10 pr-20 shadow-2xl">
+            <div className="lg:absolute top-1/2 lg:-translate-y-1/2 left-0 w-full lg:max-w-[900px] px-6 md:px-0">
+              <div className="bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-4xl p-10 max-md:p-6 lg:pr-20 shadow-2xl">
                 {/* Titre */}
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 border-b-4 border-white pb-2 inline-block">
                   Notre Histoire
@@ -42,7 +42,7 @@ export default function AboutSection() {
           {/* Notre Mission */}
           <div className="relative">
             {/* Image à gauche */}
-            <div className="relative z-50 h-[300px] w-[300px] rounded-3xl overflow-hidden">
+            <div className="hidden lg:block relative z-50 h-[300px] w-[300px] rounded-3xl overflow-hidden">
               <Image
                 src="/apropos-section-image2.png"
                 alt="Notre Mission"
@@ -52,8 +52,8 @@ export default function AboutSection() {
             </div>
 
             {/* Carte d'information superposée */}
-            <div className="absolute top-1/2 -translate-y-1/2 right-0 w-full max-w-[900px] px-6 md:px-0">
-              <div className="bg-gradient-to-br from-[#33B5E5] to-[#0099CC] rounded-4xl p-10 pl-20 shadow-2xl">
+            <div className="lg:absolute top-1/2 lg:-translate-y-1/2 right-0 w-full lg:max-w-[900px] px-6 md:px-0">
+              <div className="bg-gradient-to-br from-[#33B5E5] to-[#0099CC] rounded-4xl p-10 max-md:p-6 lg:pl-20 shadow-2xl">
                 {/* Titre */}
                 <h2 className="text-3xl md:text-4xl font-bold text-[#FFD700] mb-6 border-b-4 border-[#FFD700] pb-2 inline-block">
                   Notre Mission

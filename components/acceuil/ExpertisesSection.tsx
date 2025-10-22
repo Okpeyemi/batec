@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ExpertisesSection() {
   return (
-    <section className="pt-20 pb-40 px-6 bg-white">
+    <section className="pt-20 pb-20 lg:pb-40 md:px-6 bg-white">
       <div className="max-w-5xl mx-auto">
         {/* Titre de la section */}
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-black">
@@ -11,11 +11,11 @@ export default function ExpertisesSection() {
         </h2>
 
         {/* Grille des expertises */}
-        <div className="space-y-24">
+        <div className="space-y-20">
           {/* Expertise 1 - Construction d'Exception */}
           <div className="relative">
             {/* Image */}
-            <div className="relative h-[400px] md:h-[500px] max-w-[800px] rounded-4xl overflow-hidden">
+            <div className="hidden lg:block relative h-[400px] md:h-[500px] max-w-[800px] rounded-4xl overflow-hidden">
               <Image
                 src="/acceuil-section-image1.png"
                 alt="Construction d'Exception"
@@ -25,11 +25,11 @@ export default function ExpertisesSection() {
             </div>
 
             {/* Carte d'information superposée */}
-            <div className="absolute top-1/2 -translate-y-1/2 right-0 w-full md:w-[500px] px-6 md:px-0">
-              <div className="bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-4xl p-8 shadow-2xl">
+            <div className="lg:absolute top-1/2 lg:-translate-y-1/2 right-0 w-full lg:w-[500px] px-6 md:px-0">
+              <div className="bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-4xl p-8 max-md:p-6 shadow-2xl">
                 <div className="flex items-center gap-4">
                     {/* Icône */}
-                <div className="bg-[#FF6B6B] w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                <div className="hidden md:flex bg-[#FF6B6B] w-16 h-16 rounded-full flex items-center justify-center mb-4">
                   <div className="relative w-8 h-8">
                     <Image
                       src="/warranty.png"
@@ -52,8 +52,8 @@ export default function ExpertisesSection() {
                 </p>
 
                 {/* Badge garantie */}
-                <div className="flex items-center gap-3 mb-6 bg-black/10 rounded-full px-4 py-2 w-fit">
-                  <div className="bg-[#FFD700] w-10 h-10 rounded-full flex items-center justify-center">
+                <div className="flex items-center gap-3 mb-6 md:bg-black/10 rounded-full md:px-4 md:py-2 w-fit">
+                  <div className="hidden md:flex bg-[#FFD700] w-10 h-10 rounded-full flex items-center justify-center">
                     <div className="relative w-6 h-6">
                       <Image
                         src="/warranty.png"
@@ -68,7 +68,7 @@ export default function ExpertisesSection() {
                   </span>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex lg:flex-row flex-col items-center gap-4">
                     {/* Sous-texte */}
                 <p className="text-black text-sm flex-1 text-justify">
                   Votre tranquillité : Un chantier bien géré, des délais respectés, et un résultat qui vous rend fier.
@@ -77,7 +77,7 @@ export default function ExpertisesSection() {
                 {/* Bouton */}
                 <Link
                   href="/contact"
-                  className="inline-block bg-[#FF6B6B] text-white px-8 py-3 rounded-full font-bold hover:bg-[#ff5252] transition-colors"
+                  className="inline-block bg-[#FF6B6B] w-full lg:w-auto text-center text-white px-8 py-3 rounded-full font-bold hover:bg-[#ff5252] transition-colors"
                 >
                   En savoir plus
                 </Link>
@@ -89,7 +89,7 @@ export default function ExpertisesSection() {
           {/* Expertise 2 - Rénovation Sur Mesure */}
           <div className="relative">
             {/* Image */}
-            <div className="relative h-[400px] md:h-[500px] max-w-[800px] rounded-4xl overflow-hidden">
+            <div className="hidden lg:block relative h-[400px] md:h-[500px] max-w-[800px] rounded-4xl overflow-hidden">
               <Image
                 src="/acceuil-section-image2.png"
                 alt="Rénovation Sur Mesure"
@@ -99,11 +99,11 @@ export default function ExpertisesSection() {
             </div>
 
             {/* Carte d'information superposée - À gauche cette fois */}
-            <div className="absolute top-1/2 -translate-y-1/2 right-0 w-full md:w-[500px] px-6 md:px-0">
-              <div className="bg-gradient-to-br from-[#33B5E5] to-[#0099CC] rounded-4xl p-8 shadow-2xl">
+            <div className="lg:absolute top-1/2 lg:-translate-y-1/2 right-0 w-full lg:w-[500px] px-6 md:px-0">
+              <div className="bg-gradient-to-br from-[#33B5E5] to-[#0099CC] rounded-4xl p-8 max-md:p-6 shadow-2xl">
                 <div className="flex items-center gap-4">
                     {/* Icône */}
-                <div className="bg-[#FFD700] w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                <div className="hidden md:flex bg-[#FFD700] w-16 h-16 rounded-full flex items-center justify-center mb-4">
                   <div className="relative w-8 h-8">
                     <Image
                       src="/warranty.png"
@@ -126,8 +126,8 @@ export default function ExpertisesSection() {
                 </p>
 
                 {/* Badge garantie */}
-                <div className="flex items-center gap-3 mb-6 bg-white/20 rounded-full p-2 w-fit">
-                  <div className="bg-[#FFD700] w-10 h-10 rounded-full flex items-center justify-center">
+                <div className="flex items-center gap-3 mb-6 md:bg-white/20 rounded-full md:p-2 w-fit">
+                  <div className="hidden md:flex bg-[#FFD700] w-10 h-10 rounded-full flex items-center justify-center">
                     <div className="relative w-6 h-6">
                       <Image
                         src="/warranty.png"
@@ -142,7 +142,7 @@ export default function ExpertisesSection() {
                   </span>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex lg:flex-row flex-col items-center gap-4">
                     {/* Sous-texte */}
                 <p className="text-white text-sm flex-1 text-justify">
                   Votre engagement : Des travaux maîtrisés qui valorisent votre bien et réalisent votre quotidien.
@@ -151,7 +151,7 @@ export default function ExpertisesSection() {
                 {/* Bouton */}
                 <Link
                   href="/contact"
-                  className="inline-block bg-white text-[#0099CC] px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors"
+                  className="inline-block bg-white w-full lg:w-auto text-center text-[#0099CC] px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors"
                 >
                   En savoir plus
                 </Link>
