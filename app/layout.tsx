@@ -19,8 +19,11 @@ const play = Play({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://batec-guadeloupe.com'),
+  alternates: {
+    canonical: '/',
+  },
   title: {
-    default: "BATEC Guadeloupe - Construction et Rénovation BTP | Entreprise de Bâtiment",
+    default: "BATEC Guadeloupe - Expert BTP Construction Rénovation | Entreprise Bâtiment",
     template: "%s | BATEC Guadeloupe"
   },
   description: "Expert BTP en Guadeloupe depuis 3 ans. Construction, rénovation, tous corps d'état avec garantie décennale. Devis gratuit. ☎ 0590 69 32 66",
