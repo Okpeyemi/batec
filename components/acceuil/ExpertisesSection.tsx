@@ -47,10 +47,10 @@ export default function ExpertisesSection() {
               <div className="bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-4xl p-8 max-md:p-6 shadow-2xl">
                 <div className="flex items-center gap-4">
                     {/* Icône */}
-                <div className="hidden md:flex bg-[#FF6B6B] w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                <div className="hidden md:flex bg-[#E22027] w-16 h-16 rounded-full flex items-center justify-center mb-4">
                   <div className="relative w-8 h-8">
                     <Image
-                      src="/warranty.png"
+                      src="/grue.png"
                       alt="Icon"
                       fill
                       className="object-contain"
@@ -95,7 +95,7 @@ export default function ExpertisesSection() {
                 {/* Bouton */}
                 <Link
                   href="/contact"
-                  className="inline-block bg-[#FF6B6B] w-full lg:w-auto text-center text-white px-8 py-3 rounded-full font-bold hover:bg-[#ff5252] transition-colors"
+                  className="inline-block bg-[#E22027] w-full lg:w-auto text-center text-white px-8 py-3 rounded-full font-bold hover:bg-[#ff5252] transition-colors"
                 >
                   En savoir plus
                 </Link>
@@ -129,7 +129,7 @@ export default function ExpertisesSection() {
                 <div className="hidden md:flex bg-[#FFD700] w-16 h-16 rounded-full flex items-center justify-center mb-4">
                   <div className="relative w-8 h-8">
                     <Image
-                      src="/warranty.png"
+                      src="/grue.png"
                       alt="Icon"
                       fill
                       className="object-contain"
