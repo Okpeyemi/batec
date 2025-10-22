@@ -65,7 +65,7 @@ export default function Hero({
               </span>
             </a>
             {/* Cercle jaune avec icône cursor */}
-            <div className="absolute right-64 bg-[#FFD700] w-28 h-28 rounded-full flex items-center justify-center transition-transform group-hover:scale-105 pointer-events-none">
+            <div className="absolute right-60 bg-[#FFD700] w-28 h-28 rounded-full flex items-center justify-center transition-transform group-hover:scale-105 pointer-events-none">
               <div className="relative w-10 h-10">
                 <Image
                   src="/cursor.png"

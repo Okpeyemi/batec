@@ -9,7 +9,7 @@ export default function Home() {
         title="Construisez votre avenir avec Batec Guadeloupe"
         description="Votre partenaire BTP de confiance pour des constructions et rénovations d'exception en Guadeloupe, avec une garantie décennale pour une sérénité totale."
         buttonText="Commencez votre projet maintenant"
-        buttonLink="#contact"
+        buttonLink="/contact"
       />
       <ExpertisesSection />
     </>
