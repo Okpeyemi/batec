@@ -25,7 +25,7 @@ export default function Hero({
           src={backgroundImage}
           alt="Hero background"
           fill
-          className="object-cover object-[25%_60%]"
+          className="object-cover object-[25%_55%]"
           priority
         />
         {/* Overlay pour améliorer la lisibilité du texte */}
@@ -48,7 +48,7 @@ export default function Hero({
           </h1>
 
           {/* Description */}
-          <p className="text-lg md:text-xl text-white text-center mb-8 leading-relaxed">
+          <p className="text-lg md:text-xl text-black text-center mb-8 leading-relaxed">
             {description}
           </p>
           </div>
@@ -58,14 +58,14 @@ export default function Hero({
             <a
               href={buttonLink}
               onClick={onButtonClick}
-              className="inline-flex items-center bg-[#0099CC] text-white rounded-full hover:bg-[#007aa3] transition-all duration-300 pl-10 pr-20 py-4"
+              className="inline-flex items-center bg-[#0099CC] text-white rounded-full hover:bg-[#007aa3] transition-all duration-300 pl-10 pr-30 py-4"
             >
-              <span className="text-xl font-normal w-[200px]">
+              <span className="text-xl font-normal w-[200px] text-center">
                 {buttonText}
               </span>
             </a>
             {/* Cercle jaune avec icône cursor */}
-            <div className="absolute right-70 bg-[#FFD700] w-28 h-28 rounded-full flex items-center justify-center transition-transform group-hover:scale-105 pointer-events-none">
+            <div className="absolute right-64 bg-[#FFD700] w-28 h-28 rounded-full flex items-center justify-center transition-transform group-hover:scale-105 pointer-events-none">
               <div className="relative w-10 h-10">
                 <Image
                   src="/cursor.png"

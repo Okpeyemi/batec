@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-[#33B5E5] to-[#0099CC] text-white">
+    <footer className="bg-gradient-to-b from-[#3DB5FF] to-[#2393D9] text-white">
       {/* Section CTA */}
       <div className="py-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -15,7 +15,7 @@ export default function Footer() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-white text-[#0099CC] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors"
+            className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors"
           >
             Obtenir un Devis
           </Link>
@@ -23,7 +23,7 @@ export default function Footer() {
       </div>
 
       {/* Section Informations */}
-      <div className="bg-[#0099CC] py-12 px-6">
+      <div className="bg-[#2393D9] py-12 px-6">
         <div className="max-w-7xl mx-auto text-center">
           {/* Nom de l'entreprise */}
           <h3 className="text-xl font-bold mb-4">BATEC Guadeloupe</h3>

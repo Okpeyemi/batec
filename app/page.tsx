@@ -1,11 +1,9 @@
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Footer from "@/components/Footer";
+import ExpertisesSection from "@/components/acceuil/ExpertisesSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
+    <>
       <Hero
         backgroundImage="/hero-acceuil.png"
         title="Construisez votre avenir avec Batec Guadeloupe"
@@ -13,10 +11,7 @@ export default function Home() {
         buttonText="Commencez votre projet maintenant"
         buttonLink="#contact"
       />
-      <main className="max-w-7xl mx-auto px-6 py-12">
-        {/* Contenu de la page à venir */}
-      </main>
-      <Footer />
-    </div>
+      <ExpertisesSection />
+    </>
   );
 }
