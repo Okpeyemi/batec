@@ -1,19 +1,37 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function ServicesSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <section className="pt-20 pb-20 lg:pb-60 xl:pb-40 md:px-6 bg-white">
+    <section ref={ref} className="pt-20 pb-20 lg:pb-60 xl:pb-40 md:px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Titre de la section */}
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-black">
+        <motion.h2 
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold text-center mb-16 text-black"
+        >
           Explorez Nos Services BTP
-        </h2>
+        </motion.h2>
 
         {/* Grille des services */}
         <div className="space-y-20 lg:space-y-100 xl:space-y-80 lg:mt-54 xl:mt-44">
           {/* Service 1 - Construction d'Exception */}
-          <div className="relative">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative"
+          >
             {/* Image à droite */}
             <div className="hidden lg:flex relative z-50 h-[400px] w-[400px] rounded-4xl overflow-hidden ml-auto">
               <Image
@@ -99,10 +117,15 @@ export default function ServicesSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Service 2 - Rénovation */}
-          <div className="relative">
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="relative"
+          >
             {/* Image à gauche */}
             <div className="hidden lg:flex relative z-50 h-[400px] w-[400px] rounded-4xl overflow-hidden">
               <Image
@@ -187,7 +210,7 @@ export default function ServicesSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

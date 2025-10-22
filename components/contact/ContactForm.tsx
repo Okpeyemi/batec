@@ -1,8 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
 
 export default function ContactForm() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
   const [formData, setFormData] = useState({
     email: "",
     phone: "",
@@ -27,15 +31,26 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white">
+    <section ref={ref} className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white">
       <div className="max-w-2xl mx-auto">
         {/* Titre */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-black">
+        <motion.h2 
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-black"
+        >
           Ecrivez nous :
-        </h2>
+        </motion.h2>
 
         {/* Formulaire */}
-        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+        <motion.form 
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          onSubmit={handleSubmit} 
+          className="space-y-4 sm:space-y-6"
+        >
           {/* Email et Téléphone */}
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
             <div className="relative">
@@ -134,7 +149,7 @@ export default function ContactForm() {
           >
             Envoyer
           </button>
-        </form>
+        </motion.form>
       </div>
     </section>
   );

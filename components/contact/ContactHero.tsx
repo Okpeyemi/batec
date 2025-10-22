@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function ContactHero() {
   return (
@@ -23,21 +26,34 @@ export default function ContactHero() {
 
           {/* Coordonnées à droite */}
           <div className="px-4 sm:px-0">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0099CC] mb-6 sm:mb-8">
+            <motion.h1 
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0099CC] mb-6 sm:mb-8"
+            >
               Coordonnées
-            </h1>
+            </motion.h1>
 
             <div className="space-y-4 sm:space-y-6 text-black">
               {/* Adresse */}
-              <div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
                 <h3 className="font-bold text-base sm:text-lg mb-2">Adresse :</h3>
                 <p className="text-base sm:text-lg">
                   1 Lot Immeuble Sud Jarry, ZAC de Houelbourg 97122 BAIE-MAHAULT
                 </p>
-              </div>
+              </motion.div>
 
               {/* Téléphone */}
-              <div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
                 <h3 className="font-bold text-base sm:text-lg mb-2">Téléphone :</h3>
                 <a 
                   href="tel:+590690326666" 
@@ -45,10 +61,14 @@ export default function ContactHero() {
                 >
                   0590 69 32 66
                 </a>
-              </div>
+              </motion.div>
 
               {/* Email */}
-              <div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+              >
                 <h3 className="font-bold text-base sm:text-lg mb-2">Email :</h3>
                 <a 
                   href="mailto:commercial@batecguadeloupe.com" 
@@ -56,7 +76,7 @@ export default function ContactHero() {
                 >
                   commercial@batecguadeloupe.com
                 </a>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

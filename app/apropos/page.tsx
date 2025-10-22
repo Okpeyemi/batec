@@ -1,6 +1,24 @@
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/apropos/AboutSection";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "À Propos - Notre Histoire & Mission",
+  description: "BATEC Guadeloupe : 3 ans d'expertise BTP. Découvrez notre histoire, notre mission et notre engagement pour la construction en Guadeloupe.",
+  keywords: [
+    "entreprise BTP Guadeloupe",
+    "histoire BATEC",
+    "entreprise construction Baie-Mahault",
+    "BTP Antilles",
+    "partenaire construction Guadeloupe"
+  ],
+  openGraph: {
+    title: "À Propos de BATEC Guadeloupe - Notre Histoire",
+    description: "3 ans d'expertise BTP en Guadeloupe. Découvrez notre engagement pour l'excellence.",
+    url: "https://batec-guadeloupe.com/apropos",
+  },
+};
 
 export default function APropos() {
   return (

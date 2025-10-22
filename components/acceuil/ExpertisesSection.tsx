@@ -1,19 +1,37 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function ExpertisesSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <section className="pt-20 pb-20 lg:pb-40 md:px-6 bg-white">
+    <section ref={ref} className="pt-20 pb-20 lg:pb-40 md:px-6 bg-white">
       <div className="max-w-5xl mx-auto">
         {/* Titre de la section */}
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-black">
+        <motion.h2 
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold text-center mb-16 text-black"
+        >
           Nos Expertises BTP
-        </h2>
+        </motion.h2>
 
         {/* Grille des expertises */}
         <div className="space-y-20">
           {/* Expertise 1 - Construction d'Exception */}
-          <div className="relative">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative"
+          >
             {/* Image */}
             <div className="hidden lg:block relative h-[400px] md:h-[500px] max-w-[800px] rounded-4xl overflow-hidden">
               <Image
@@ -84,10 +102,15 @@ export default function ExpertisesSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Expertise 2 - Rénovation Sur Mesure */}
-          <div className="relative">
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="relative"
+          >
             {/* Image */}
             <div className="hidden lg:block relative h-[400px] md:h-[500px] max-w-[800px] rounded-4xl overflow-hidden">
               <Image
@@ -158,7 +181,7 @@ export default function ExpertisesSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

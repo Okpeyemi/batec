@@ -1,13 +1,26 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function AboutSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <section className="py-20 md:px-6 bg-white">
+    <section ref={ref} className="py-20 md:px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Grille des sections */}
         <div className="space-y-24">
           {/* Notre Histoire */}
-          <div className="relative">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
             {/* Image à droite */}
             <div className="hidden lg:block relative z-50 h-[300px] w-[300px] rounded-3xl overflow-hidden ml-auto">
               <Image
@@ -37,10 +50,15 @@ export default function AboutSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Notre Mission */}
-          <div className="relative">
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative"
+          >
             {/* Image à gauche */}
             <div className="hidden lg:block relative z-50 h-[300px] w-[300px] rounded-3xl overflow-hidden">
               <Image
@@ -70,7 +88,7 @@ export default function AboutSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
